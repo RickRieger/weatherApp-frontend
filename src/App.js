@@ -5,17 +5,12 @@ import SearchHistory from './components/SearchHistory/SearchHistory';
 import axios from 'axios';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import bgImageThunder from "./Images/thunder.jpg"
-import bgImageSnow from "./Images/snow.jpg"
-import bgImageRain from "./Images/rain.jpg"
-import bgImageDrizzle from "./Images/drizzle.jpg"
-import bgImageClouds_1 from "./Images/clouds_1.jpg"
-import bgImageClouds_2 from "./Images/clouds_2.jpg"
-import bgImageClear from "./Images/clear.jpg"
-import bgImageAtmosphere from "./Images/atmosphere.jpg"
+
+
 // git project https://github.com/erikflowers/weather-icons
 import 'weather-icons/css/weather-icons.css';
 const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
+
 export class App extends Component {
   state = {
     search_history: [],
@@ -46,42 +41,42 @@ export class App extends Component {
     switch (true) {
       case rangeId >= 200 && rangeId < 232:
         this.setState({ icon: icons.Thunderstorm });
-        document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${bgImageThunder}), `
+        document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://images.unsplash.com/photo-1429552077091-836152271555?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1264&q=80), `
         document.body.style.backgroundSize = 'cover';
         break;
       case rangeId >= 300 && rangeId <= 321:
         this.setState({ icon: icons.Drizzle });
-        document.body.style.backgroundImage =`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${bgImageDrizzle})`
+        document.body.style.backgroundImage =`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://images.unsplash.com/photo-1525087740718-9e0f2c58c7ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80)`
         document.body.style.backgroundSize = 'cover';
         break;
       case rangeId >= 500 && rangeId <= 521:
         this.setState({ icon: icons.Rain });
-        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${bgImageRain})`
+        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1575&q=80)`
         document.body.style.backgroundSize = 'cover';
         break;
       case rangeId >= 600 && rangeId <= 622:
         this.setState({ icon: icons.Snow });
-        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${bgImageSnow})`
+        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://images.unsplash.com/photo-1517299321609-52687d1bc55a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3150&q=80)`
         document.body.style.backgroundSize = 'cover';
         break;
       case rangeId >= 701 && rangeId <= 781:
         this.setState({ icon: icons.Atmosphere });
-        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${bgImageAtmosphere})`
+        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://images.unsplash.com/photo-1503122703469-3dbbe39d0d1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80)`
         document.body.style.backgroundSize = 'cover';
         break;
       case rangeId === 800:
         this.setState({ icon: icons.Clear });
-        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${bgImageClear})`
+        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://images.unsplash.com/photo-1603039359732-e01e025e40a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80)`
         document.body.style.backgroundSize = 'cover';
         break;
       case rangeId >= 801 && rangeId <= 804:
         this.setState({ icon: icons.Clouds });
-        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${bgImageClouds_1})`
+        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1429734956993-8a9b0555e122?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3358&q=80)`
         document.body.style.backgroundSize = 'cover';
         break;
       default:
         this.setState({ icon: icons.Clouds });
-        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${bgImageClouds_2})`
+        document.body.style.backgroundImage=`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(https://images.unsplash.com/photo-1465576482687-69f0e0d47126?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3155&q=80)`
         document.body.style.backgroundSize = 'cover';
     }
   }
