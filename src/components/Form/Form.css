@@ -9,6 +9,7 @@ form input[name="country"] {
   border: none;
   border-bottom: 3px solid black;
   border-radius: 0;
+  font-size: 2rem;
 } 
 form input:focus{
   background-color:transparent !important;

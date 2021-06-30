@@ -14,7 +14,18 @@ body {
 html{
   height:100vh;
 }
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.btn{
+  display:inline-block;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

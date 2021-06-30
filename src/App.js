@@ -225,7 +225,7 @@ export class App extends Component {
         <div>{this.state.error2 ? <div className="alert alert-danger mx-5" role="alert">
         City not found, please try a different search...!
       </div> : ""}</div>
-        <h1>Slick Rick's Weather App</h1>
+        <h1 className="heading">Slick Rick's Weather App</h1>
         <Form 
         getWeather={this.getWeather} 
         error={this.state.error} 

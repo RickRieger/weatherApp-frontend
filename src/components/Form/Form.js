@@ -31,8 +31,8 @@ export class Form extends Component {
               onChange={this.props.handleOnChange}
             />
           </div>
-          <div className="col-md-3 mt-md-0 mt-2 text-md-left ">
-            <button className="btn btn-warning">Get Weather</button>
+          <div className="col-md-3 mt-2 text-md-left ">
+            <button className="button-get">Get Weather</button>
           </div>
         </div>
       </form>

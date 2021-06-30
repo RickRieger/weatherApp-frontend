@@ -5,6 +5,10 @@
   height:100%;
   color:white;
 }
+.heading{
+  font-size: 3rem;
+  color:black;
+}
 .card{
   border:none !important;
   margin-left:auto;
@@ -20,20 +24,48 @@
 .hst-btn{
   margin-right: 5%;
 }
-li{
-  border:none !important;
-}
+
 @media only screen and (max-width: 800px) {
   .card{
     margin-left:auto;
     margin-right:auto;
-    width:100%;
+    width:90%;
   }
 }
-.btn{
-  /* margin-right:8%; */
+
+.button-delete{
+  background-color: transparent;
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 10%;
+  width: 115px;
+  height: 55px;
+  color: rgb(169, 169, 169);
+}
+.button-delete:hover{
+  background-color: rgb(167, 0, 0);
+  color:black
 }
 
+.button-get:hover{
+  background-color: rgb(196, 196, 39);
+  color:black;
+}
+
+.button-get{
+  background-color: transparent;
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 10%;
+  width: 115px;
+  height: 55px;
+  color: rgb(169, 169, 169);
+}
+
+.button-delete:active{
+  background-color: black;
+}
+.button-get:active{
+  background-color: black;
+}
 .App-link {
   color: #61dafb;
 }
